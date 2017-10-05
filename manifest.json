@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "MVHS NewTab",
+  "description": "Opens a window when creating a new tab with the MVHS bell schedule and time left in the current period",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "MVHS NewTab"
+  },
+  "chrome_url_overrides": {
+    "newtab": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
