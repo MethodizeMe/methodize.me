@@ -11,7 +11,7 @@
     "default_title": "MVHS NewTab"
   },
   "chrome_url_overrides": {
-    "newtab": "popup.html"
+    "newtab": "newtab.html"
   },
   "permissions": [
     "activeTab",
