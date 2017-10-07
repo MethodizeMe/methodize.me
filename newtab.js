@@ -25,28 +25,12 @@ class Time {
     }
   }
 
-  getTime() {
-    return this.timeArray;
-  }
-
-  getHours() {
-    return this.timeArray[0];
-  }
-
-  getMinutes() {
-    return this.timeArray[1];
-  }
-
-  getSeconds() {
-    return this.timeArray[2];
-  }
-
   getAMPM() {
     return this.timeArray[3];
   }
 
   shortString() {
-    return this.timeArray[0] + ":" + this.timeArray[1] + " " + this.timeArray[3];
+    return this.timeArray[0] + ":" + this.timeArray[1];
   }
 
   toString() {
@@ -54,67 +38,39 @@ class Time {
   }
 }
 
+class Day {
+
+}
+
 class TimeBlock {
   constructor(startTime, endTime) {
     this.startTime = startTime;
     this.endTime = endTime;
   }
-
-  getStartTime() {
-      return startTime;
-  }
-
-  getEndTime() {
-      return endTime;
-  }
 }
 
 function openCloseNav() {
-
     if (document.getElementById("mySidenav").style.width == "250px") {
       document.getElementById("mySidenav").style.width = "0px";
-      document.getElementById("main").style.marginLeft= "0px";
+      document.getElementById("menuButton").style.transform = "translate(16px, 16px) rotate(0deg)";
     } else {
       document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
+      document.getElementById("menuButton").style.transform = "translate(16px, 16px) rotate(90deg)";
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var link = document.getElementById('menuButton');
-    link.addEventListener('click', function() {
-        openCloseNav();
-    });
+  var link = document.getElementById('menuButton');
+  link.addEventListener('click', function() {
+    openCloseNav();
+  });
 });
 
 window.onload = setInterval(function() {
-  var date = new Date();
-
   time = new Time();
 
   //block = new TimeBlock(, );
 
   document.getElementById("time").innerHTML = time.shortString();
-
-  CanvasJS.addColorSet("clockColors",
-     [
-     "#0061ff",
-     "#ffae00",
-  ]); 
-
-  /*var chart = new CanvasJS.Chart("chartContainer", {
-    //animationEnabled: true,
-    colorSet:  "clockColors",
-    data: [{
-      type: "pie",
-      startAngle: 270,
-      yValueFormatString: "##0.00\" Minutes Left\"",
-      dataPoints: [
-        {y: (time.getHours() * 60) + (time.getMinutes()) + (time.getSeconds() / 60)},
-        {y: 800 - (time.getHours() * 60) + (time.getMinutes()) + (time.getSeconds() / 60)},
-      ]
-    }]
-  });
-  chart.render();*/
 
 }, 200);
