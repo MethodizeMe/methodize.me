@@ -14,5 +14,5 @@ window.onload = setInterval(function() {
     }
   }
 
-  document.getElementById("time").innerHTML = time[0] + ":" + time[1] + " " + time[3];
+  document.getElementById("time").innerHTML = time[0] + ":" + time[1] + " " + time[2];
 }, 200);
