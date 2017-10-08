@@ -52,10 +52,12 @@ class TimeBlock {
 function openCloseNav() {
     if (document.getElementById("mySidenav").style.width == "250px") {
       document.getElementById("mySidenav").style.width = "0px";
+      document.getElementById("mySidenav").style.paddingRight = "0px";
       document.getElementById("menuButton").style.transform = "translate(16px, 16px) rotate(0deg)";
     } else {
       document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("menuButton").style.transform = "translate(16px, 16px) rotate(90deg)";
+      document.getElementById("mySidenav").style.paddingRight = "110px";
+      document.getElementById("menuButton").style.transform = "translate(16px, 16px) rotate(270deg)";
     }
 }
 
