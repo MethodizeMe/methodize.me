@@ -1,1 +1,1 @@
-# MVHSNewTab
+# Methodize.me
